@@ -8,6 +8,7 @@ def colour_to_char(colour, available_chars):
     brightness = max(colour)/255
     return available_chars[math.floor(brightness/(1/len(available_chars)))-1]
 
+
 #Takes an image path and given the max width, returns a resized image keeping aspect ratio with the given max width
 def load_image(path, max_width):
     im = Image.open(path)
@@ -15,10 +16,6 @@ def load_image(path, max_width):
     resize = max_width/width
     im.thumbnail((max_width, int(height*resize)))
     return im
-
-
-
-
 
 
 def main():
